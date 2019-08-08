@@ -2,6 +2,10 @@ def main():
     for i in range(1, 106):
         printing_number = True
         
+        if i % 11 == 0:
+            print('Bong')
+            continue
+
         if i % 3 == 0:
             printing_number = False
             print('Fizz', end='')
