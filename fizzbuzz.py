@@ -1,12 +1,20 @@
 def main():
-    for i in range(1, 101):
-        if i % 15 == 0:
-            print('FizzBuzz')
-        elif i % 3 == 0:
-            print('Fizz')
-        elif i % 5 == 0:
-            print('Buzz')
-        else:
-            print(i)
+    for i in range(1, 106):
+        printing_number = True
+        
+        if i % 3 == 0:
+            printing_number = False
+            print('Fizz', end='')
+        if i % 5 == 0:
+            printing_number = False
+            print('Buzz', end='')
+        if i % 7 == 0:
+            printing_number = False
+            print('Bang', end='')
+        
+        if printing_number:
+            print(i, end='')
+        
+        print()
 
 if __name__ == "__main__": main()
