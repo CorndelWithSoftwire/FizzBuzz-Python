@@ -1,5 +1,5 @@
 def main():
-    for i in range(1, 144):
+    for i in range(1, 256):
         outputs = []
 
         if i % 11 == 0:
@@ -15,6 +15,9 @@ def main():
         if i % 13 == 0:
             index = ([i for i, j in enumerate(outputs) if j[0] == 'B'] or [len(outputs)])[0]
             outputs.insert(index, 'Fezz')
+
+        if i % 17 == 0:
+            outputs.reverse()
 
         if not outputs:
             outputs.append(str(i))
